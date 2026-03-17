@@ -1,0 +1,365 @@
+html{
+    scroll-behavior: smooth;
+
+}
+
+
+/* attributes of poligon clickable region areas on map*/
+
+.map-area {
+  fill: white;
+  fill-opacity: 0;
+  cursor: pointer;
+}
+
+/* 5 column navigation grid */
+.nav-grid nav {
+display: grid;
+grid-template-columns: repeat(5,1fr);
+justify-content: center;  
+
+font-family: 'Neue Haas Grotesk', sans-serif;
+font-weight: 700;
+font-size: 14px;
+}
+
+/* padding and allignent for nav */
+.nav-grid a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    text-decoration: none;   /* removes underline */
+    color: inherit;
+}
+
+/* navigation links turn red when hovered over */
+.nav-grid a:hover{
+    color: rgb(255, 77, 0);
+}
+
+.nav-grid > * {
+  min-width: 0;
+}
+
+/* using mediaa tag for phone layouts, nav turns into two columns*/
+
+@media (max-width: 500px) {
+.nav-grid nav{
+    grid-template-columns: 1fr 1fr;
+}
+.nav-grid a {
+    padding: 0.5rem 0;
+    font-size: 13px;
+    text-align: left;
+  }
+}
+
+/* transition for region clicked */
+.region-name{
+    transition:all 1s ease;
+}
+
+/*  glow animation  */
+@keyframes highlightGlow {
+  0%   { box-shadow: 0 0 0px rgba(255,200,0,0); }
+  50%  { box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); }
+  100% { box-shadow: 0 0 0px rgba(255,200,0,0); }
+}
+
+/* information glows so you can find it easily */
+.region-name:target {
+  animation: highlightGlow 1.4s ease;
+}
+
+/* current page attributes for nav  */
+.current-page{
+    opacity: 0.4;
+}
+
+.page-container{
+
+}
+
+/* map allign */
+.map-section{
+display: flex;
+justify-content: center;
+}
+
+/* svg map size */
+.map{
+width: 100% ;
+max-width: 460px ;
+height: auto;
+}
+
+
+
+/* text attributes for home page */
+
+.home-brief {
+font-family: "Neue Haas Grotesk", sans-serif;
+
+display: block;
+justify-content: center;  
+align-items: center;     
+text-align: center;
+}
+
+.home-brief h2{
+font-weight: 700;
+font-size: 16px;
+}
+
+.home-brief p{
+font-weight: 400;
+font-size: 12px;
+font-style: italic;
+}
+
+.home-brief small{
+font-weight: 400;
+font-size: 10px;
+font-style: italic;
+}
+
+/* 7 column index, allignemnt, padding and gaps */
+
+.index-grid {
+font-family: 'Neue Haas Grotesk', sans-serif;
+font-weight: 500;
+font-size: 11px;
+
+display: grid;
+grid-template-columns: 1fr 0.5fr 1fr 1fr 1.5fr 1fr 1fr;
+gap: 2em;
+margin: 1em;
+
+}
+
+/* index only appears for mobile resolution, for better user experience */
+
+.index-mobile{
+    display: none; /*hidden on desktop*/
+    font-weight: 600;
+}
+
+
+
+/* index header attributes  */
+.index-header {
+font-family: 'Neue Haas Grotesk', sans-serif;
+font-weight: 650;
+font-size: 12px;
+
+display: grid;
+grid-template-columns: 1fr 0.5fr 1fr 1fr 1.5fr 1fr 1fr;
+gap: 2em;
+margin: 0.5em;
+
+
+}
+
+.index-header a{
+    text-decoration: none;   /* removes underline */
+    color: inherit;
+}
+
+
+/* index links turn red when hovered over */
+
+.index-header a:hover{
+    color: rgb(255, 77, 0);
+}
+
+/* index subheader attributes  */
+.index-subhead {
+font-family: 'Neue Haas Grotesk', sans-serif;
+font-weight: 500;
+font-size: 12px;
+
+display: grid;
+grid-template-columns: 1fr 0.5fr 1fr 1fr 1.5fr 1fr 1fr;
+gap: 2em;
+
+}
+
+/* index for mobile resolution, hides first two rows and inserts column for better user experince  */
+
+@media (max-width: 500px){
+    .index-header{
+        grid-template-columns: 1fr;
+        padding: 0.1em 0;
+        gap: 0;
+        font-size: 13px;
+        display: none;
+        
+
+    }
+
+    .index-subhead{
+        grid-template-columns: 1fr;
+        padding: 0.1em 0;
+        gap: 0;
+        font-size: 13px;
+        display: none;
+
+    }
+    
+    .index-grid{
+        grid-template-columns: 1fr 1fr;
+        padding: 0.1em 0;
+        gap: 8px;
+        font-size: 13px;
+        display: grid;
+    
+
+    }
+
+    .index-mobile{
+        display: block;
+    }
+
+    
+}
+
+/* header line break attributes  */
+.head-line-break {
+    border: none;
+    height: 1.5px;
+    background-color: black;
+}
+
+/* regular line break attributes  */
+.line-break {
+    border: none;
+    height: 1px;
+    background-color: black;
+}
+
+/* two column grid attributes*/
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 2em;
+    margin: 0.5em;
+
+    font-family: 'Neue Haas Grotesk', sans-serif;
+
+}
+
+/* right column subcategories  */
+
+.anatomy-right-col{
+    display: grid;
+    grid-template-rows: repeat(8, auto);
+
+    margin: 1em;
+    padding: 1em;
+
+    font-family: 'Neue Haas Grotesk', sans-serif;
+    font-size: 12px;
+
+}
+
+/* text attributes */
+.topic{
+font-weight: 650;
+font-size: 12px;
+}
+
+.info{
+display: inline;
+font-weight: 500;
+font-size: 12px;
+gap: 1em;
+
+}
+
+.info-subhead{
+font-weight: 600;
+font-size: 12px;
+}
+
+.right-col {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    column-gap: 2em;
+    grid-template-rows: repeat(9, auto);
+    margin: 1em;
+    padding: 1em;
+
+    font-family: 'Neue Haas Grotesk', sans-serif;
+    font-size: 12px;
+
+}
+
+.right-col img{
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+    display: block;
+     padding-bottom: 0.5em;
+
+}
+
+/* mobile resolution attributes for grid */
+
+
+@media (max-width: 500px) {
+    .right-col {
+        grid-template-columns: 1fr;
+        padding: 0.1em 0;
+        gap: 0;
+        font-size: 13px;
+    }
+
+    .anatomy-right-col{
+        grid-template-columns: 1fr;
+        padding: 0.1em 0;
+        gap: 0;
+        font-size: 13px;
+    }
+}
+
+.grid-container{
+    margin-top: 4em;
+}
+
+.anatomy-diagram{
+display: flex;
+justify-content: center;
+padding-top: 1em;
+}
+
+.diagram{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    font-family: 'Neue Haas Grotesk', sans-serif;
+}
+
+.anatomy-brief{
+    display: block;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Neue Haas Grotesk', 'Arial', sans-serif;
+    font-size: 11px;
+    padding: 0.5em;
+
+    color: inherit;
+    
+}
+
+.anatomy-brief a:hover{
+    color: rgb(255, 77, 0);
+}
+
+@media (max-width: 500px){
+    .anatomy-diagram{
+        width: 100%;
+        height: auto;
+    }
+}
