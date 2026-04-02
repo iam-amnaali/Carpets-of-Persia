@@ -7,9 +7,13 @@ html{
 /* attributes of poligon clickable region areas on map*/
 
 .map-area {
-  fill: white;
-  fill-opacity: 0;
+  fill: none;
   cursor: pointer;
+  pointer-events: all;
+}
+
+.map-area :hover polygon{
+    fill: rgb(226, 39, 39, 1);
 }
 
 /* 5 column navigation grid */
@@ -50,7 +54,7 @@ font-size: 14px;
 }
 .nav-grid a {
     padding: 0.5rem 0;
-    font-size: 13px;
+    font-size: 14px;
     text-align: left;
   }
 }
@@ -63,13 +67,12 @@ font-size: 14px;
 /*  glow animation  */
 @keyframes highlightGlow {
   0%   { box-shadow: 0 0 0px rgba(255,200,0,0); }
-  50%  { box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); }
-  100% { box-shadow: 0 0 0px rgba(255,200,0,0); }
+  100%  { box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); }
 }
 
 /* information glows so you can find it easily */
 .region-name:target {
-  animation: highlightGlow 1.4s ease;
+  animation: highlightGlow 1.4s ease forwards;
 }
 
 /* current page attributes for nav  */
@@ -105,6 +108,7 @@ display: block;
 justify-content: center;  
 align-items: center;     
 text-align: center;
+margin: 2em;
 }
 
 .home-brief h2{
@@ -114,13 +118,13 @@ font-size: 16px;
 
 .home-brief p{
 font-weight: 400;
-font-size: 12px;
+font-size: 14px;
 font-style: italic;
 }
 
 .home-brief small{
 font-weight: 400;
-font-size: 10px;
+font-size: 12px;
 font-style: italic;
 }
 
@@ -129,7 +133,7 @@ font-style: italic;
 .index-grid {
 font-family: 'Neue Haas Grotesk', sans-serif;
 font-weight: 500;
-font-size: 11px;
+font-size: 13px;
 
 display: grid;
 grid-template-columns: 1fr 0.5fr 1fr 1fr 1.5fr 1fr 1fr;
@@ -151,7 +155,7 @@ margin: 1em;
 .index-header {
 font-family: 'Neue Haas Grotesk', sans-serif;
 font-weight: 650;
-font-size: 12px;
+font-size: 13px;
 
 display: grid;
 grid-template-columns: 1fr 0.5fr 1fr 1fr 1.5fr 1fr 1fr;
@@ -177,7 +181,7 @@ margin: 0.5em;
 .index-subhead {
 font-family: 'Neue Haas Grotesk', sans-serif;
 font-weight: 500;
-font-size: 12px;
+font-size: 13px;
 
 display: grid;
 grid-template-columns: 1fr 0.5fr 1fr 1fr 1.5fr 1fr 1fr;
@@ -260,7 +264,7 @@ gap: 2em;
     padding: 1em;
 
     font-family: 'Neue Haas Grotesk', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
 
 }
 
@@ -273,14 +277,14 @@ font-size: 14px;
 .info{
 display: inline;
 font-weight: 500;
-font-size: 12px;
+font-size: 13px;
 gap: 1em;
 
 }
 
 .info-subhead{
 font-weight: 600;
-font-size: 12px;
+font-size: 13px;
 }
 
 .right-col {
@@ -346,7 +350,7 @@ padding-top: 1em;
     text-align: center;
     font-style: italic;
     font-family: 'Neue Haas Grotesk', 'Arial', sans-serif;
-    font-size: 11px;
+    font-size: 13px;
     padding: 0.5em;
 
     color: inherit;
