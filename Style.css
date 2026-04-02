@@ -380,3 +380,7 @@ padding-top: 1em;
     height: 150px;
     width: auto;
 }
+
+.body{
+    background-color: rgb(254, 252, 249);
+}
