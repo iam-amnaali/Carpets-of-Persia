@@ -166,7 +166,12 @@ margin: 0.5em;
 }
 
 .index-header a{
-    text-decoration: none;   /* removes underline */
+    text-decoration: underline;   /* removes underline */
+    color: inherit;
+}
+
+.image-col a{
+    text-decoration: underline;   /* removes underline */
     color: inherit;
 }
 
@@ -174,6 +179,10 @@ margin: 0.5em;
 /* index links turn red when hovered over */
 
 .index-header a:hover{
+    color: rgb(255, 77, 0);
+}
+
+.image-col a:hover{
     color: rgb(255, 77, 0);
 }
 
@@ -382,5 +391,5 @@ padding-top: 1em;
 }
 
 .body{
-    background-color: rgb(254, 252, 249);
+    background-color: rgb(255, 255, 255);
 }
